@@ -382,3 +382,59 @@ body {
     transform: translateY(0);
   }
 }
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  /* Hide full name in intro */
+  .intro-text h1 span {
+    display: none;
+  }
+  .intro-text h1::after {
+    content: "Abdul!";
+    color: #22c55e;
+  }
+
+  /* Hamburger menu styles */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1e293b;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .nav-li li {
+    float: none;
+    width: 100%;
+  }
+
+  .nav-li li a {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+  }
+}
+
+/* Desktop - keep old navbar */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}

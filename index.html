@@ -1,10 +1,23 @@
 <html>
 <head>
     <title>PortFolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+<div class="menu-toggle">
+  <i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-ul">
+  <div class="nav-li"> 
+     <li><a href="mailto:abdulkalam123aasath@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+     <li><a href="https://www.linkedin.com/in/abdul-kalam-aasath-j-853612269/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+     <li><a href="https://github.com/AbdulkalamAasath" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+  </div>
+</ul>
+
 <ul class="nav-ul">
 <div class="nav-li"> 
   <li><a class="active" href="#home"><i class="fas fa-house"></i> Home</a></li>
@@ -269,4 +282,15 @@
 
 
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-ul");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+});
+</script>
+
 </html>
